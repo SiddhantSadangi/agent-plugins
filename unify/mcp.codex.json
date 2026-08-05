@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "unify": {
+      "type": "http",
+      "url": "https://mcp.unifygtm.com/mcp",
+      "oauth_resource": "https://mcp.unifygtm.com/mcp",
+      "oauth": {
+        "client_id": "REPLACE_WITH_CODEX_AUTH0_CLIENT_ID"
+      }
+    }
+  }
+}

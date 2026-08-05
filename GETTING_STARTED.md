@@ -1,8 +1,8 @@
 # Getting started with Unify
 
 The setup script installs the Unify plugin non-interactively, then hands you an
-interactive sign-in command when the agent's plugin includes the Unify MCP
-server, and leaves only an agent restart to load the new plugin.
+interactive sign-in command for the Unify MCP server, and leaves only an agent
+restart to load the new plugin.
 
 ## Run setup now
 
@@ -16,10 +16,9 @@ curl -fsSL https://raw.githubusercontent.com/unifygtm/agent-plugins/main/scripts
 Browser sign-in needs a real interactive terminal (TTY), which a piped
 `curl … | bash` does not provide (stdin is the script, not a keyboard). So the
 installer runs the install steps non-interactively and does not attempt to sign
-in. When the plugin includes the Unify MCP server, tell the user to finish
-sign-in through the agent itself: fully restart the agent, then run the agent's
-MCP login flow (in Claude Code, the `/mcp` command) and complete the Unify
-browser login there.
+in. Tell the user to finish sign-in through the agent itself: fully restart the
+agent, then run the agent's MCP login flow (in Claude Code, the `/mcp` command;
+in Codex, `codex mcp login unify`) and complete the Unify browser login there.
 
 Automatic detection uses the current agent's environment and parent process.
 If the script reports that it could not detect the agent, tell the user to run
@@ -64,15 +63,18 @@ marketplace.
 ### Codex
 
 The script uses `codex plugin marketplace add` and `codex plugin add`, so no
-Plugins UI is required. The Codex plugin currently includes Unify skills only;
-the remote MCP tools are not yet included in the Codex plugin.
+Plugins UI is required. The Codex plugin bundles both the Unify skills and the
+remote MCP server. Sign-in needs a real interactive terminal (TTY), so the
+script runs `codex mcp login unify` only when one is present. Without a TTY it
+skips sign-in and tells the user to restart Codex and run the login command
+themselves.
 
 ## Finish and verify
 
 Fully restart each agent after the script completes. A new chat in an existing
 process may not reload plugins or MCP servers.
 
-After restarting Claude Code or Cursor, ask:
+After restarting the agent, ask:
 
 ```
 What can I do with Unify?

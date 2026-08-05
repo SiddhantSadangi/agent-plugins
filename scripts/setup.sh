@@ -31,8 +31,8 @@ Examples:
   curl -fsSL https://raw.githubusercontent.com/unifygtm/agent-plugins/main/scripts/setup.sh | bash -s -- all
 
 With no agent argument, the installer detects the agent that launched it.
-By default, the installer starts browser authentication for agents whose Unify
-plugin includes the MCP server. Pass --no-auth to install without signing in.
+By default, the installer starts browser authentication for the Unify MCP
+server. Pass --no-auth to install without signing in.
 EOF
 }
 
@@ -219,6 +219,18 @@ install_codex() {
   fi
 }
 
+authenticate_codex() {
+  if [[ ! -t 0 ]]; then
+    log "Skipping automatic sign-in for Codex (no interactive terminal)"
+    printf 'The Unify plugin is installed. To finish sign-in:\n'
+    printf '  1. Fully restart Codex.\n'
+    printf '  2. Run `codex mcp login %s` and complete the Unify browser login flow.\n' "$MCP_SERVER"
+    return
+  fi
+  log "Signing in to Unify for Codex"
+  codex mcp login "$MCP_SERVER"
+}
+
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --no-auth)
@@ -258,10 +270,8 @@ done
 if [[ $AUTHENTICATE -eq 1 ]]; then
   has_target claude && authenticate_claude
   has_target cursor && authenticate_cursor
+  has_target codex && authenticate_codex
 fi
 
 log "Setup complete"
 printf 'Restart each agent you installed Unify for so it loads the plugin and MCP connection.\n'
-if has_target codex; then
-  printf 'Codex currently receives the Unify skills only; MCP tools are not yet included in its plugin.\n'
-fi
