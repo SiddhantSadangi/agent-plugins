@@ -8,13 +8,14 @@
   "license": "MIT",
   "keywords": ["unify", "gtm", "sales", "prospecting", "enrichment", "outbound", "crm"],
   "skills": "./skills/",
+  "mcpServers": "./mcp.codex.json",
   "interface": {
     "displayName": "Unify",
     "shortDescription": "GTM workflows with Unify agents",
-    "longDescription": "Skills for driving Unify's go-to-market agent: discover companies and people, enrich contact data, and run outreach sequences and tasks from your coding agent.",
+    "longDescription": "Skills and tools for driving Unify's go-to-market agent: discover companies and people, enrich contact data, and run outreach sequences and tasks from your coding agent. Long-running runs report progress and relay the agent's clarifying questions back to you before continuing.",
     "developerName": "Unify",
     "category": "Productivity",
-    "capabilities": ["Read", "Write"],
+    "capabilities": ["Interactive", "Read", "Write"],
     "websiteURL": "https://www.unifygtm.com"
   }
 }
