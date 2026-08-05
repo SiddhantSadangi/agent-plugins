@@ -72,11 +72,20 @@ so on. Take IDs from there rather than parsing them out of the prose.
 `threadLink` is the same clickable thread URL `run_agent` returned, and comes
 back for both `READY` and `ERROR` runs. Present it again after relaying results
 so the user can inspect the full thread, intermediate steps, and any generated
-resources in the UI. Include the **bare URL** verbatim — most terminals and
-plain-text clients auto-linkify a raw URL, whereas Markdown link syntax
-(`[View the run](<threadLink>)`) only renders where Markdown is supported. If you
-use a Markdown link for readability, still keep the full URL visible (e.g. on its
-own line) so it stays clickable in clients that don't render Markdown.
+resources in the UI.
+
+**The result is the response; the link is only supporting context.** Never send
+only the thread link or make the user open it to learn the outcome. Lead with
+the substantive `finalAnswer` (or a faithful summary when it is long), include
+the useful records or resource details you loaded, and state errors plainly.
+Put the link last in a short, visually de-emphasized footer such as:
+
+> Run details: <threadLink>
+
+Keep the bare URL visible so terminals and plain-text clients can auto-link it.
+In clients known to support inline HTML, `<sub>Run details: <threadLink></sub>`
+is also acceptable, but do not rely on font sizing or hide the URL behind
+Markdown link text.
 
 ## Errors
 
