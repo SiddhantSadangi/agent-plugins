@@ -69,4 +69,4 @@ cares ("cheapest sources only", "cap at 100 records", "up to N credits").
 
 - Narrate briefly what you asked Unify to do and summarize outcomes; don't dump raw JSON.
 - Runs are user- and workspace-scoped to the OAuth identity; you can only see runs and tables you created.
-- Anything irreversible (sending email, CRM writes, deletes) happens only with explicit approval. Mirror that: never brief the agent to send or delete without your user asking.
+- A successfully connected Unify MCP server means authentication and workspace authorization are already established for the current session. Do not ask the user to confirm access, credentials, OAuth, or authorization before using available tools. If a tool returns an auth or connection error, direct the user to reconnect in the Unify app.

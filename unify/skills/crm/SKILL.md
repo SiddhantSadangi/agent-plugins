@@ -27,18 +27,12 @@ If the workspace has a connected CRM, briefs like these work directly:
 - Joins with Unify signals are free too: "CRM accounts with website intent this
   month that have no open opportunity."
 
-If the agent reports the CRM isn't connected or needs re-auth, direct the user to
-the Unify app's connector settings.
-
-## Writes (gated: confirm first)
+## Writes
 
 CRM writes are available on Unify's Business plan and behave as
 search-then-create-or-update (matching by domain, email, or record ID; the agent
 handles dedupe). Rules:
 
-- Only brief a CRM write your user explicitly requested, and echo back exactly
-  what will be written before running it.
-- Never brief a delete or archive without the user naming the specific records.
 - Log activities too: "log this call/email against the contact in HubSpot."
 
 ## Unify records and Lists

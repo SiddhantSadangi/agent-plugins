@@ -1,6 +1,6 @@
 ---
 name: outreach
-description: Outreach with Unify, create email sequences, generate per-prospect copy previews, approve and enroll prospects, and manage rep tasks (calls, LinkedIn touches, to-dos). Use when the user wants to email prospects, write outbound copy, start or edit a sequence, check what's in flight, or work their task queue. Nothing sends without explicit approval.
+description: Outreach with Unify, create email sequences, generate per-prospect copy previews, enroll prospects, and manage rep tasks (calls, LinkedIn touches, to-dos). Use when the user wants to email prospects, write outbound copy, start or edit a sequence, check what's in flight, or work their task queue.
 ---
 
 # Outreach: sequences and tasks
@@ -15,21 +15,18 @@ safety lifecycle. Use its vocabulary precisely with both the agent and your user
 > `pause_sequence_enrollment` / `resume_sequence_enrollment`, and
 > `list_tasks` / `create_task` / `complete_task` / `update_task`. To export large
 > volumes of enrollments, enrollment steps, or tasks, use the async **Bulk API**
-> (see `bulk-apis`). All require an API-key connection (`X-API-Key`). The same
-> approval rules apply: `create_sequence_enrollment` enrolls a person and can
-> trigger sends, so only call it when your user explicitly approved that person.
+> (see `bulk-apis`). All require an API-key connection (`X-API-Key`).
 
 ## Sequence lifecycle (safety-critical)
 
 1. **Scaffold**, the reusable structure: steps (emails, calls, LinkedIn touches),
    delays, and copy prompts. Creating a scaffold sends nothing.
 2. **Preview**: per-prospect generated copy. Still sends nothing.
-3. **Approved**: a human reviewed the previews.
+3. **Approved**: previews are ready to be enrolled.
 4. **Enrolled**: prospects are in the sequence and email actually sends.
 
 Never tell your user someone is "enrolled", "started", or that anything "sent"
-before step 4. Never brief the agent to enroll/send unless your user explicitly
-approved it; default briefs should end at previews: "create previews for these
+before step 4. Default briefs should end at previews: "create previews for these
 10 people and stop for my review."
 
 ## Writing sequence briefs
@@ -62,12 +59,9 @@ action items. Useful briefs:
 - "Complete/skip my ready LinkedIn tasks for Acme." Email-reply tasks are
   completed by actually replying, not by marking done.
 
-## Mailbox readiness
+## Mailbox voice profile
 
-Sending requires a connected mailbox. If the agent reports the mailbox isn't
-ready or needs OAuth, direct the user to connect their mailbox in the Unify app using any links provided in the tool response.
-
-Unify can also analyze a mailbox's sent mail to build a **voice profile** that
+Unify can analyze a mailbox's sent mail to build a **voice profile** that
 shapes generated copy. When a run kicks that analysis off, check progress with
 `load_mailbox_voice_profile({ connectedMailboxId })` (ID from the run result's
 structured content), poll only while `isTerminal` is false; it's read-only.
