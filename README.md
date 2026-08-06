@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.unifygtm.com">Unify</a> · <a href="https://docs.unifygtm.com">Docs</a>
+  <a href="https://www.unifygtm.com">Unify</a> · <a href="https://docs.unifygtm.com/developers/mcp">Docs</a>
 </p>
 
 Unify is AI-powered GTM for sellers. Find companies and people,
