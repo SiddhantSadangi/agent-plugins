@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.unifygtm.com">Unify</a> · <a href="https://docs.unifygtm.com/developers/mcp">Docs</a>
+  <a href="https://www.unifygtm.com">Unify</a> · <a href="https://docs.unifygtm.com/developers/mcp">Docs</a> · <a href="https://www.unifygtm.com/legal/privacy-policy">Privacy Policy</a> · <a href="https://www.unifygtm.com/legal/terms-and-conditions">Terms of Service</a> · <a href="https://www.unifygtm.com/legal/customer-data-processing-agreement">DPA</a> · <a href="https://trust.unifygtm.com/">Trust Center</a>
 </p>
 
 Unify is AI-powered GTM for sellers. Find companies and people,

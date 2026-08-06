@@ -16,6 +16,8 @@
     "developerName": "Unify",
     "category": "Productivity",
     "capabilities": ["Interactive", "Read", "Write"],
-    "websiteURL": "https://www.unifygtm.com"
+    "websiteURL": "https://www.unifygtm.com",
+    "privacyPolicyURL": "https://www.unifygtm.com/legal/privacy-policy",
+    "termsOfServiceURL": "https://www.unifygtm.com/legal/terms-and-conditions"
   }
 }
