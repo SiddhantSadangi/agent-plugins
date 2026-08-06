@@ -1,10 +1,9 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
   "mcpServers": {
     "unify": {
-      "url": "https://mcp.unifygtm.com/mcp",
-      "auth": {
-        "CLIENT_ID": "HbfBtDL1ZK7xYNq1tCHtmi7VUMe8yfW8"
-      }
+      "type": "streamable-http",
+      "url": "https://mcp.unifygtm.com/mcp"
     }
   }
 }

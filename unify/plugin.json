@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "unify",
+  "version": "0.1.0",
+  "description": "Run Unify's GTM agent to build company and people lists, enrich contact data, and launch sequences and tasks.",
+  "author": {
+    "name": "Unify",
+    "url": "https://www.unifygtm.com"
+  },
+  "homepage": "https://www.unifygtm.com",
+  "repository": "https://github.com/unifygtm/agent-plugins",
+  "license": "MIT",
+  "keywords": ["unify", "gtm", "sales", "prospecting", "enrichment", "outbound", "crm"]
+}

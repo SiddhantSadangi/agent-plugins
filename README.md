@@ -7,7 +7,7 @@
 
 <p align="center">
   <strong>Unify in your AI agent</strong>: skills and the Unify MCP server,
-  for Claude Code, Cursor, and Codex.
+  packaged for the Agent Plugins standard, Claude Code, Cursor, and Codex.
 </p>
 
 <p align="center">
@@ -34,3 +34,11 @@ curl -fsSL https://raw.githubusercontent.com/unifygtm/agent-plugins/main/scripts
 ```
 
 See [GETTING_STARTED.md](GETTING_STARTED.md) for agent-specific details.
+
+## Portable plugin
+
+The [`unify/`](unify/) directory conforms to the
+[Agent Plugins 1.0.0 specification](https://agent-plugins.org/specification).
+Compatible clients can discover its root [`plugin.json`](unify/plugin.json),
+Agent Skills under [`skills/`](unify/skills/), and Streamable HTTP MCP server
+configuration in [`mcp.json`](unify/mcp.json).
