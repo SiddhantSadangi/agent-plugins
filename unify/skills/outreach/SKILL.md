@@ -15,7 +15,7 @@ safety lifecycle. Use its vocabulary precisely with both the agent and your user
 > `pause_sequence_enrollment` / `resume_sequence_enrollment`, and
 > `list_tasks` / `create_task` / `complete_task` / `update_task`. To export large
 > volumes of enrollments, enrollment steps, or tasks, use the async **Bulk API**
-> (see `bulk-apis`). All require an API-key connection (`X-API-Key`).
+> tools. All require an API-key connection (`X-API-Key`).
 
 ## Sequence lifecycle (safety-critical)
 
