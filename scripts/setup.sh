@@ -189,7 +189,7 @@ authenticate_cursor() {
   ensure_temp_dir
   auth_dir="$TEMP_DIR/cursor-auth"
   mkdir -p "$auth_dir/.cursor"
-  cp "$HOME/.cursor/plugins/local/$PLUGIN/mcp.json" "$auth_dir/.cursor/mcp.json"
+  cp "$HOME/.cursor/plugins/local/$PLUGIN/mcp.cursor.json" "$auth_dir/.cursor/mcp.json"
 
   log "Signing in to Unify for Cursor"
   (

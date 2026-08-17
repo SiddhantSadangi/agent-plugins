@@ -3,9 +3,8 @@
     "unify": {
       "type": "http",
       "url": "https://mcp.unifygtm.com/mcp",
-      "oauth_resource": "https://mcp.unifygtm.com/mcp",
       "oauth": {
-        "client_id": "VU9S5uuNCXgLASZNmFoCJAYWFZGp19VS"
+        "client_id": "noOdn0wOIcxxTQUbQ3HEggImQAxkIjDf"
       }
     }
   }

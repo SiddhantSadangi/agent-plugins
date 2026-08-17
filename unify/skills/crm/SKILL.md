@@ -13,9 +13,9 @@ and HubSpot and also keeps its own canonical company/person records and Lists.
 > public API exposes direct tools: `list_objects` / `get_object` and their
 > attributes, `get_object_record` / `create_object_record` / `update_object_record`
 > / `upsert_object_record` / `find_unique_object_record` / `delete_object_record`,
-> and the async **Bulk API** for exporting or syncing many records at once (see
-> `bulk-apis`). The agent briefs below remain the path for
-> complex workflows and anything needing reasoning.
+> and the async **Bulk API** tools for exporting or syncing many records at once.
+> The agent briefs below remain the path for complex workflows and anything
+> needing reasoning.
 
 ## Reads (free, live)
 

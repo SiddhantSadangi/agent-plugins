@@ -1,6 +1,6 @@
 ---
 name: unify
-description: Unify; start here. Directory for working with Unify, the go-to-market platform for finding and engaging buyers. Maps every Unify skill, agent-runs (run any GTM task through the Unify agent and manage the poll/answer loop), data-tables (page through result rows), discovery (build company and people lists), enrichment (find emails, phones, firmographics), outreach (sequences, tasks, outbound copy), crm (Salesforce/HubSpot reads and writes), bulk-apis (async query jobs to export large datasets via the public API). Read this first to answer "what can I do with Unify?"
+description: Unify; start here. Directory for working with Unify, the go-to-market platform for finding and engaging buyers. Maps every Unify skill, agent-runs (run any GTM task through the Unify agent and manage the poll/answer loop), data-tables (page through result rows), discovery (build company and people lists), enrichment (find emails, phones, firmographics), outreach (sequences, tasks, outbound copy), and crm (Salesforce/HubSpot reads and writes). Read this first to answer "what can I do with Unify?"
 ---
 
 # Unify
@@ -41,14 +41,14 @@ repeatable read/write of data they already have rather than a reasoning task.
 
 | You want to...                                                  | Skill                                     |
 | --------------------------------------------------------------- | ----------------------------------------- |
-| Install the plugin or fix auth                                  | see `GETTING_STARTED.md` in the repo root |
+| Install the plugin or fix auth                                  | [Getting started](https://github.com/unifygtm/agent-plugins/blob/main/GETTING_STARTED.md) |
 | Run any Unify task and manage the run lifecycle                 | `agent-runs`                              |
 | Build a list of companies or people                             | `discovery`                               |
 | Find emails, phones, or company data for known entities         | `enrichment`                              |
 | Write and send outreach (sequences), manage rep tasks           | `outreach`                                |
 | Read or write Salesforce/HubSpot, save records, export lists    | `crm`                                     |
 | Pull rows from a result table                                   | `data-tables`                             |
-| Export/sync large datasets deterministically via the public API | `bulk-apis`                               |
+| Export/sync large datasets deterministically via the public API | Use the public Bulk API tools             |
 
 ## Vocabulary (use these terms in briefs and with users)
 

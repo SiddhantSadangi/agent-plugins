@@ -69,6 +69,24 @@ script runs `codex mcp login unify` only when one is present. Without a TTY it
 skips sign-in and tells the user to restart Codex and run the login command
 themselves.
 
+Codex uses a global OAuth callback port rather than the callback port declared
+by an individual plugin. Before signing in, add this top-level setting to
+`~/.codex/config.toml` (outside any `[table]` section):
+
+```toml
+mcp_oauth_callback_port = 1455
+```
+
+Alternatively, set the port for only the Unify login command:
+
+```bash
+codex -c mcp_oauth_callback_port=1455 mcp login unify
+```
+
+The fixed port must match the callback URL registered for the Codex OAuth
+client. Without this setting, Codex selects a random port and Auth0 rejects the
+request with a callback URL mismatch.
+
 ## Finish and verify
 
 Fully restart each agent after the script completes. A new chat in an existing
@@ -140,6 +158,7 @@ then `/reload-plugins` (or fully restart the agent) to load the new code.
 | Tools are missing after setup                    | Fully quit and restart the agent.                                                                     |
 | Cursor does not show the plugin                  | Confirm the organization allows user-local plugin imports.                                            |
 | Authentication was skipped or failed             | Re-run the same setup command, or omit `--no-auth`. The install steps are idempotent.                 |
+| Codex reports an OAuth callback URL mismatch      | Set top-level `mcp_oauth_callback_port = 1455` in `~/.codex/config.toml`, restart Codex, and retry.    |
 | Sign-in was skipped (no interactive terminal)    | Fully restart the agent, then complete the login flow inside it — in Claude Code, the `/mcp` command. |
 | Signed in, but tools still fail                  | Restart the agent so its MCP process reloads the stored session.                                      |
 | "workspace does not have chat funding available" | Ask a Unify workspace admin to check the workspace plan or credits.                                   |
