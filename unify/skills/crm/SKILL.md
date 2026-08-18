@@ -43,9 +43,6 @@ handles dedupe). Rules:
 - **Lists**: named, saved collections in the Unify app. "Export this DataTable to
   a List called Q3 targets" (the export previews counts: new, already in list,
   duplicates, invalid) before committing. Say whether creating brand-new records
-  is allowed or the export should only link existing ones. To verify a List after
-  a run, call `load_list({ listId })` directly (ID from the run result's
-  structured content). It returns name, owner, member count, and app URL, but
-  intentionally not the members themselves.
+  is allowed or the export should only link existing ones.
 - **Personas**: tenant-level title sets. "Update our 'economic buyer' persona to
   include VP Finance titles" is a valid brief; edits are versioned and reversible.
