@@ -1,14 +1,14 @@
 {
   "name": "unify",
-  "version": "0.1.1",
-  "description": "Run Unify's GTM agent from Codex — build company and people lists, enrich emails and phone numbers, and launch sequences and tasks.",
+  "version": "0.1.2",
+  "description": "Run Unify's GTM agent from Codex to build company and people lists, enrich emails and phone numbers, and launch sequences and tasks.",
   "author": { "name": "Unify", "url": "https://www.unifygtm.com" },
   "homepage": "https://www.unifygtm.com",
   "repository": "https://github.com/unifygtm/agent-plugins",
   "license": "MIT",
   "keywords": ["unify", "gtm", "sales", "prospecting", "enrichment", "outbound", "crm"],
   "skills": "./skills/",
-  "mcpServers": "./mcp.codex.json",
+  "mcpServers": "./.mcp.json",
   "apps": "./.app.json",
   "interface": {
     "displayName": "Unify",
@@ -19,6 +19,11 @@
     "capabilities": ["Interactive", "Read", "Write"],
     "websiteURL": "https://www.unifygtm.com",
     "privacyPolicyURL": "https://www.unifygtm.com/legal/privacy-policy",
-    "termsOfServiceURL": "https://www.unifygtm.com/legal/terms-and-conditions"
+    "termsOfServiceURL": "https://www.unifygtm.com/legal/terms-and-conditions",
+    "defaultPrompt": [
+      "Find target accounts that match my ICP.",
+      "Enrich these contacts with verified work emails.",
+      "Draft an outreach sequence for these prospects."
+    ]
   }
 }
